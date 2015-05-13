@@ -5,6 +5,7 @@ Android sqlite helper libraries
 
 You must create parent class that extends SQLiteOpenHelper
 ```groovy
+
 public class DBAdapter extends SQLiteOpenHelper {
 
 	// Database configuration
@@ -45,10 +46,12 @@ public class DBAdapter extends SQLiteOpenHelper {
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {}
 
 }
+
 ```
 
 Sample Implementations
 ```groovy
+
 public class SampleDB extends DBAdapter {
 
 	private static final String TABLE_NAME = "YOUR_TABLE_NAME";
@@ -89,4 +92,5 @@ public class SampleDB extends DBAdapter {
 		return db.delete(TABLE_NAME, "KEY_FIELD = "+ keyId);
 	}
 }
+
 ```
