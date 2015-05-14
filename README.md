@@ -103,6 +103,8 @@ Sample usage operation
 ```groovy
 public class SampleActivity extends Activity {
 	
+	private SampleDB db;
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -110,7 +112,7 @@ public class SampleActivity extends Activity {
 		
 		// create instance
 		try {
-			SampleDB db = new SampleDB(this);
+			db = new SampleDB(this);
 		} catch(IOException e) {
 			e.printStackTrace();
 		}
