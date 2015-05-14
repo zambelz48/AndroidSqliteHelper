@@ -3,16 +3,17 @@ Android sqlite helper libraries
 
 # Sample Usage
 
-Add Gradle dependency:
+* Add Gradle dependency:
 ```gradle
 dependencies {
    compile 'com.github.zambelz48:AndroidSqliteHelper:1.0.0'
 }
 ```
-* Or
-[Download from Bintray] (http://jcenter.bintray.com/com/github/zambelz48/AndroidSqliteHelper/1.0.0/AndroidSqliteHelper-1.0.0.aar)
+Or [Download from Bintray] (http://jcenter.bintray.com/com/github/zambelz48/AndroidSqliteHelper/1.0.0/AndroidSqliteHelper-1.0.0.aar)
 
-Create base(parent) class that extends SQLiteOpenHelper
+* Put the database file on 'Assets' folder on your project
+
+* Create base(parent) class that extends SQLiteOpenHelper
 ```groovy
 public class DBAdapter extends SQLiteOpenHelper {
 
@@ -56,7 +57,7 @@ public class DBAdapter extends SQLiteOpenHelper {
 }
 ```
 
-Sample implementations, extending base(parent) class above
+* Sample implementations, extending base(parent) class above
 
 ```groovy
 public class SampleDB extends DBAdapter {
@@ -101,7 +102,7 @@ public class SampleDB extends DBAdapter {
 }
 ```
 
-Sample usage operation
+* Sample usage operation
 ```groovy
 public class SampleActivity extends Activity {
 	
