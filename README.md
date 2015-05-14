@@ -10,7 +10,7 @@ dependencies {
 }
 ```
 
-You must create parent class that extends SQLiteOpenHelper
+You must create base(parent) class that extends SQLiteOpenHelper
 ```groovy
 public class DBAdapter extends SQLiteOpenHelper {
 
@@ -54,7 +54,7 @@ public class DBAdapter extends SQLiteOpenHelper {
 }
 ```
 
-Sample Implementations
+Sample implementations, extending base(parent) class above
 
 ```groovy
 public class SampleDB extends DBAdapter {
@@ -96,5 +96,36 @@ public class SampleDB extends DBAdapter {
 	public boolean delete(String keyId) {
 		return db.delete(TABLE_NAME, "KEY_FIELD = "+ keyId);
 	}
+}
+```
+
+Sample usage operation
+```groovy
+public class SampleActivity extends Activity {
+	
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.sample_layout);
+		
+		// create instance
+		try {
+			SampleDB db = new SampleDB(this);
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+
+		// sample operation
+		String[] values = {
+			"values_1",
+			"values_2",
+			"values_3"
+		};
+
+		db.open();
+		db.insert(values);
+		db.close();
+	}
+	
 }
 ```
