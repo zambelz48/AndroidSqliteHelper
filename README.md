@@ -1,6 +1,7 @@
 # Overview
 Android sqlite helper libraries
-[![Bintray](jcenter.bintray.com)](http://jcenter.bintray.com/com/github/zambelz48/AndroidSqliteHelper/1.0.0/AndroidSqliteHelper-1.0.0.aar)
+
+[![Bintray]()](http://jcenter.bintray.com/com/github/zambelz48/AndroidSqliteHelper/1.0.0/AndroidSqliteHelper-1.0.0.aar)
 
 # Sample Usage
 
