@@ -1,8 +1,6 @@
 # Overview
 Android sqlite helper libraries
 
-[Download from Bintray] (http://jcenter.bintray.com/com/github/zambelz48/AndroidSqliteHelper/1.0.0/AndroidSqliteHelper-1.0.0.aar)
-
 # Sample Usage
 
 Add Gradle dependency:
@@ -11,8 +9,10 @@ dependencies {
    compile 'com.github.zambelz48:AndroidSqliteHelper:1.0.0'
 }
 ```
+* Or
+[Download from Bintray] (http://jcenter.bintray.com/com/github/zambelz48/AndroidSqliteHelper/1.0.0/AndroidSqliteHelper-1.0.0.aar)
 
-You must create base(parent) class that extends SQLiteOpenHelper
+Create base(parent) class that extends SQLiteOpenHelper
 ```groovy
 public class DBAdapter extends SQLiteOpenHelper {
 
